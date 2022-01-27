@@ -15,7 +15,7 @@
 #!/bin/bash
 # 本脚本工作目录必须是git仓库的主目录
 # Add Some Package
-./scripts/feeds update -a
+cd openwrt && ./scripts/feeds update -a
 
 rm -rf package/lean/luci-app-jd-dailybonus package/lean/luci-theme-argon
 rm -rf package/feeds/packages/smartdns
@@ -30,7 +30,7 @@ git clone --depth=1 https://github.com/vernesong/OpenClash.git
 git clone --depth=1 https://github.com/fw876/helloworld.git
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git
 
-./scripts/feeds install -a
+cd openwrt && ./scripts/feeds install -a
 
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
