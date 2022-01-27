@@ -29,7 +29,7 @@ git clone --depth=1 https://github.com/pymumu/smartdns.git
 git clone --depth=1 https://github.com/vernesong/OpenClash.git
 git clone --depth=1 https://github.com/fw876/helloworld.git
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall.git
-cd -
+
 ./scripts/feeds install -a
 
 # Modify default IP
